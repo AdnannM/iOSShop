@@ -9,13 +9,16 @@
 /* Begin PBXBuildFile section */
 		A691257A27327E8100B279EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A691257927327E8100B279EE /* AppDelegate.swift */; };
 		A691257C27327E8100B279EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A691257B27327E8100B279EE /* SceneDelegate.swift */; };
-		A691257E27327E8100B279EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A691257D27327E8100B279EE /* ViewController.swift */; };
+		A691257E27327E8100B279EE /* WellcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A691257D27327E8100B279EE /* WellcomeViewController.swift */; };
 		A691258127327E8100B279EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A691257F27327E8100B279EE /* Main.storyboard */; };
 		A691258327327E8200B279EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A691258227327E8200B279EE /* Assets.xcassets */; };
 		A691258627327E8200B279EE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A691258427327E8200B279EE /* LaunchScreen.storyboard */; };
 		A691259127327E8300B279EE /* iOSShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A691259027327E8300B279EE /* iOSShopTests.swift */; };
 		A691259B27327E8300B279EE /* iOSShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A691259A27327E8300B279EE /* iOSShopUITests.swift */; };
 		A691259D27327E8300B279EE /* iOSShopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A691259C27327E8300B279EE /* iOSShopUITestsLaunchTests.swift */; };
+		A69125AE2732811B00B279EE /* ShopTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69125AD2732811B00B279EE /* ShopTableViewController.swift */; };
+		A69125B02732812800B279EE /* Shop.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69125AF2732812800B279EE /* Shop.swift */; };
+		A69125B22732813F00B279EE /* ShopTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A69125B12732813F00B279EE /* ShopTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +42,7 @@
 		A691257627327E8100B279EE /* iOSShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A691257927327E8100B279EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A691257B27327E8100B279EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A691257D27327E8100B279EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A691257D27327E8100B279EE /* WellcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WellcomeViewController.swift; sourceTree = "<group>"; };
 		A691258027327E8100B279EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		A691258227327E8200B279EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A691258527327E8200B279EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +52,9 @@
 		A691259627327E8300B279EE /* iOSShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOSShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A691259A27327E8300B279EE /* iOSShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSShopUITests.swift; sourceTree = "<group>"; };
 		A691259C27327E8300B279EE /* iOSShopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSShopUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A69125AD2732811B00B279EE /* ShopTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTableViewController.swift; sourceTree = "<group>"; };
+		A69125AF2732812800B279EE /* Shop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shop.swift; sourceTree = "<group>"; };
+		A69125B12732813F00B279EE /* ShopTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,11 +105,11 @@
 		A691257827327E8100B279EE /* iOSShop */ = {
 			isa = PBXGroup;
 			children = (
-				A691257927327E8100B279EE /* AppDelegate.swift */,
-				A691257B27327E8100B279EE /* SceneDelegate.swift */,
-				A691257D27327E8100B279EE /* ViewController.swift */,
+				A69125AC27327F3600B279EE /* Supporting Files */,
+				A69125AB27327F2F00B279EE /* View */,
+				A69125AA27327F2700B279EE /* Model */,
+				A69125A927327F1F00B279EE /* Controllers */,
 				A691257F27327E8100B279EE /* Main.storyboard */,
-				A691258227327E8200B279EE /* Assets.xcassets */,
 				A691258427327E8200B279EE /* LaunchScreen.storyboard */,
 				A691258727327E8200B279EE /* Info.plist */,
 			);
@@ -125,6 +131,41 @@
 				A691259C27327E8300B279EE /* iOSShopUITestsLaunchTests.swift */,
 			);
 			path = iOSShopUITests;
+			sourceTree = "<group>";
+		};
+		A69125A927327F1F00B279EE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A691257D27327E8100B279EE /* WellcomeViewController.swift */,
+				A69125AD2732811B00B279EE /* ShopTableViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		A69125AA27327F2700B279EE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A69125AF2732812800B279EE /* Shop.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		A69125AB27327F2F00B279EE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A69125B12732813F00B279EE /* ShopTableViewCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A69125AC27327F3600B279EE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A691258227327E8200B279EE /* Assets.xcassets */,
+				A691257B27327E8100B279EE /* SceneDelegate.swift */,
+				A691257927327E8100B279EE /* AppDelegate.swift */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,8 +299,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A691257E27327E8100B279EE /* ViewController.swift in Sources */,
+				A691257E27327E8100B279EE /* WellcomeViewController.swift in Sources */,
+				A69125AE2732811B00B279EE /* ShopTableViewController.swift in Sources */,
 				A691257A27327E8100B279EE /* AppDelegate.swift in Sources */,
+				A69125B22732813F00B279EE /* ShopTableViewCell.swift in Sources */,
+				A69125B02732812800B279EE /* Shop.swift in Sources */,
 				A691257C27327E8100B279EE /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
