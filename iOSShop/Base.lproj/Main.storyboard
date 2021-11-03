@@ -20,12 +20,15 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHP-YZ-QHr">
-                                <rect key="frame" x="89" y="812" width="237" height="50"/>
+                                <rect key="frame" x="89" y="795" width="237" height="50"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Continue">
                                     <fontDescription key="titleFontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="26"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <segue destination="5TU-RZ-IBI" kind="presentation" id="nSO-2h-xCm"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -37,7 +40,7 @@
                             <constraint firstItem="JHP-YZ-QHr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="89" id="Tey-e0-Hgn"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JHP-YZ-QHr" secondAttribute="trailing" constant="88" id="Vb6-jN-aed"/>
                             <constraint firstItem="Str-hu-a5q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WH3-6u-HoD"/>
-                            <constraint firstItem="JHP-YZ-QHr" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="b3E-Ob-QUY"/>
+                            <constraint firstItem="JHP-YZ-QHr" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-17" id="b3E-Ob-QUY"/>
                         </constraints>
                     </view>
                     <connections>
@@ -48,8 +51,64 @@
             </objects>
             <point key="canvasLocation" x="124.6376811594203" y="69.642857142857139"/>
         </scene>
+        <!--Shop Table View Controller-->
+        <scene sceneID="n2W-k6-VIM">
+            <objects>
+                <tableViewController id="5TU-RZ-IBI" customClass="ShopTableViewController" customModule="iOSShop" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="669-VL-rgK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="495" id="sqO-9e-sWf" customClass="ShopTableViewCell" customModule="iOSShop" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44.5" width="414" height="495"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sqO-9e-sWf" id="6ws-9Z-huj">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="495"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w8a-82-tXj">
+                                            <rect key="frame" x="20" y="11" width="374" height="473"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="macbook-1" translatesAutoresizingMaskIntoConstraints="NO" id="w97-Qw-q3V">
+                                                    <rect key="frame" x="0.0" y="0.0" width="374" height="333"/>
+                                                </imageView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="w97-Qw-q3V" firstAttribute="top" secondItem="w8a-82-tXj" secondAttribute="top" id="F1e-6Q-Lg7"/>
+                                                <constraint firstAttribute="bottom" secondItem="w97-Qw-q3V" secondAttribute="bottom" constant="140" id="Qld-G5-ehY"/>
+                                                <constraint firstAttribute="trailing" secondItem="w97-Qw-q3V" secondAttribute="trailing" id="aK3-Uc-7Ap"/>
+                                                <constraint firstItem="w97-Qw-q3V" firstAttribute="leading" secondItem="w8a-82-tXj" secondAttribute="leading" id="d2Z-g9-V7S"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="w8a-82-tXj" firstAttribute="leading" secondItem="6ws-9Z-huj" secondAttribute="leadingMargin" id="TOR-Wk-xqe"/>
+                                        <constraint firstItem="w8a-82-tXj" firstAttribute="trailing" secondItem="6ws-9Z-huj" secondAttribute="trailingMargin" id="eyE-ua-eLd"/>
+                                        <constraint firstItem="w8a-82-tXj" firstAttribute="top" secondItem="6ws-9Z-huj" secondAttribute="topMargin" id="f9u-jb-8Lb"/>
+                                        <constraint firstItem="w8a-82-tXj" firstAttribute="bottom" secondItem="6ws-9Z-huj" secondAttribute="bottomMargin" id="ydO-Re-jv2"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="backgroundCellView" destination="w8a-82-tXj" id="Xp8-3s-s21"/>
+                                    <outlet property="imageViewCell" destination="w97-Qw-q3V" id="YOa-NC-jpM"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="5TU-RZ-IBI" id="SCL-KK-Y8A"/>
+                            <outlet property="delegate" destination="5TU-RZ-IBI" id="Z0P-gy-B9c"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KbM-4l-8W1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="947.82608695652186" y="72.991071428571431"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="macbook-1" width="1440" height="897"/>
         <image name="wellcome" width="1080" height="1920"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

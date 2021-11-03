@@ -9,6 +9,19 @@ import UIKit
 
 class ShopTableViewCell: UITableViewCell {
 
+    // MARK: - Properties
+    @IBOutlet weak var backgroundCellView: UIView! {
+        didSet {
+            backgroundCellView.layer.cornerRadius = 20
+        }
+    }
+    @IBOutlet weak var imageViewCell: UIImageView! {
+        didSet {
+            imageViewCell.layer.cornerRadius = 20
+        }
+    }
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
