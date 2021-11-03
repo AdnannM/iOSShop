@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -10,19 +11,46 @@
         <!--Wellcome View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="WellcomeViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="WellcomeViewController" customModule="iOSShop" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wellcome" translatesAutoresizingMaskIntoConstraints="NO" id="Str-hu-a5q">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JHP-YZ-QHr">
+                                <rect key="frame" x="89" y="812" width="237" height="50"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Continue">
+                                    <fontDescription key="titleFontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="26"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="Str-hu-a5q" secondAttribute="bottom" id="8FB-Dk-hNU"/>
+                            <constraint firstItem="Str-hu-a5q" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Gbq-lw-fio"/>
+                            <constraint firstItem="Str-hu-a5q" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="KbK-AT-DYC"/>
+                            <constraint firstItem="JHP-YZ-QHr" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="89" id="Tey-e0-Hgn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JHP-YZ-QHr" secondAttribute="trailing" constant="88" id="Vb6-jN-aed"/>
+                            <constraint firstItem="Str-hu-a5q" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="WH3-6u-HoD"/>
+                            <constraint firstItem="JHP-YZ-QHr" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="b3E-Ob-QUY"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="continueButton" destination="JHP-YZ-QHr" id="lgK-LV-dS0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="124.6376811594203" y="69.642857142857139"/>
         </scene>
     </scenes>
     <resources>
+        <image name="wellcome" width="1080" height="1920"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
