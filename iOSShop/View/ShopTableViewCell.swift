@@ -20,8 +20,6 @@ class ShopTableViewCell: UITableViewCell {
             imageViewCell.layer.cornerRadius = 20
         }
     }
-    
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

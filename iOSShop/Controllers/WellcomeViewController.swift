@@ -17,15 +17,9 @@ class WellcomeViewController: UIViewController {
             continueButton.layer.borderWidth = 2
         }
     }
-    
-    
     // View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
     }
-
-
 }
-
