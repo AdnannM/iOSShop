@@ -24,7 +24,7 @@ class ShopTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var modelLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
-    
+    @IBOutlet weak var cpuLabel: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

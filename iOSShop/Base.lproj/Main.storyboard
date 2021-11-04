@@ -70,26 +70,16 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w8a-82-tXj">
                                             <rect key="frame" x="20" y="11" width="374" height="473"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="macbook-1" translatesAutoresizingMaskIntoConstraints="NO" id="w97-Qw-q3V">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="macbook-10" translatesAutoresizingMaskIntoConstraints="NO" id="w97-Qw-q3V">
                                                     <rect key="frame" x="0.0" y="0.0" width="374" height="333"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OU5-e8-YuU">
-                                                    <rect key="frame" x="0.0" y="354" width="211" height="38"/>
+                                                    <rect key="frame" x="0.0" y="354" width="211" height="25"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="38" id="OQr-kD-gE8"/>
+                                                        <constraint firstAttribute="height" constant="25" id="OQr-kD-gE8"/>
                                                         <constraint firstAttribute="width" constant="211" id="grm-xl-K9j"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVU-6T-9fr">
-                                                    <rect key="frame" x="0.0" y="417" width="211" height="38"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="211" id="Law-q6-TJH"/>
-                                                        <constraint firstAttribute="height" constant="38" id="hZ5-Va-jdV"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="28"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -99,19 +89,41 @@
                                                         <constraint firstAttribute="width" constant="106" id="Utf-TP-09Q"/>
                                                         <constraint firstAttribute="height" constant="38" id="jWf-eL-h8z"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="28"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OuO-x3-YAC">
+                                                    <rect key="frame" x="0.0" y="430" width="211" height="35"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="35" id="Eu5-la-jtI"/>
+                                                        <constraint firstAttribute="width" constant="211" id="ScP-2t-DfM"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="28"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OVU-6T-9fr">
+                                                    <rect key="frame" x="0.0" y="392" width="211" height="30"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="211" id="Law-q6-TJH"/>
+                                                        <constraint firstAttribute="height" constant="30" id="hZ5-Va-jdV"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="28"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="backgroundColor" systemColor="systemGray3Color"/>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="OVU-6T-9fr" secondAttribute="bottom" constant="18" id="Baw-LV-BlI"/>
+                                                <constraint firstAttribute="bottom" secondItem="OVU-6T-9fr" secondAttribute="bottom" constant="51" id="Baw-LV-BlI"/>
+                                                <constraint firstAttribute="bottom" secondItem="OuO-x3-YAC" secondAttribute="bottom" constant="8" id="Bq9-P5-aPl"/>
                                                 <constraint firstItem="OU5-e8-YuU" firstAttribute="leading" secondItem="w8a-82-tXj" secondAttribute="leading" id="Cgm-fY-WfQ"/>
                                                 <constraint firstItem="w97-Qw-q3V" firstAttribute="top" secondItem="w8a-82-tXj" secondAttribute="top" id="F1e-6Q-Lg7"/>
                                                 <constraint firstItem="OU5-e8-YuU" firstAttribute="top" secondItem="w97-Qw-q3V" secondAttribute="bottom" constant="21" id="Ifb-j7-kPh"/>
                                                 <constraint firstItem="OVU-6T-9fr" firstAttribute="leading" secondItem="w8a-82-tXj" secondAttribute="leading" id="OGu-CF-JHz"/>
                                                 <constraint firstAttribute="bottom" secondItem="w97-Qw-q3V" secondAttribute="bottom" constant="140" id="Qld-G5-ehY"/>
+                                                <constraint firstItem="OuO-x3-YAC" firstAttribute="leading" secondItem="w8a-82-tXj" secondAttribute="leading" id="Ryb-kE-7DM"/>
                                                 <constraint firstAttribute="trailing" secondItem="w97-Qw-q3V" secondAttribute="trailing" id="aK3-Uc-7Ap"/>
                                                 <constraint firstItem="w97-Qw-q3V" firstAttribute="leading" secondItem="w8a-82-tXj" secondAttribute="leading" id="d2Z-g9-V7S"/>
                                                 <constraint firstAttribute="trailing" secondItem="1Yl-YL-Pkg" secondAttribute="trailing" id="dtH-Rv-ral"/>
@@ -128,6 +140,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="backgroundCellView" destination="w8a-82-tXj" id="Xp8-3s-s21"/>
+                                    <outlet property="cpuLabel" destination="OuO-x3-YAC" id="yGe-Iu-3CI"/>
                                     <outlet property="imageViewCell" destination="w97-Qw-q3V" id="YOa-NC-jpM"/>
                                     <outlet property="modelLabel" destination="OVU-6T-9fr" id="0Vs-G5-blI"/>
                                     <outlet property="nameLabel" destination="OU5-e8-YuU" id="Y1p-Ie-rjM"/>
@@ -147,10 +160,13 @@
         </scene>
     </scenes>
     <resources>
-        <image name="macbook-1" width="1440" height="897"/>
+        <image name="macbook-10" width="1440" height="960"/>
         <image name="wellcome" width="1080" height="1920"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray3Color">
+            <color red="0.7803921568627451" green="0.7803921568627451" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
