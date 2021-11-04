@@ -20,6 +20,11 @@ class ShopTableViewCell: UITableViewCell {
             imageViewCell.layer.cornerRadius = 20
         }
     }
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var modelLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

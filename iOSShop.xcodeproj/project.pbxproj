@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8D1AA70AECC7CFA877C9EF0B /* Pods_iOSShop_iOSShopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397235890DCC25D5E7A47457 /* Pods_iOSShop_iOSShopUITests.framework */; };
-		9F8D0E9B1FF636A0D07C31F0 /* Pods_iOSShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADD9CB87F5BA5AA52214A85F /* Pods_iOSShop.framework */; };
 		A691257A27327E8100B279EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A691257927327E8100B279EE /* AppDelegate.swift */; };
 		A691257C27327E8100B279EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A691257B27327E8100B279EE /* SceneDelegate.swift */; };
 		A691257E27327E8100B279EE /* WellcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A691257D27327E8100B279EE /* WellcomeViewController.swift */; };
@@ -74,7 +73,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9F8D0E9B1FF636A0D07C31F0 /* Pods_iOSShop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,7 +105,6 @@
 				C63E228184752DE2A3BFFC0C /* Pods-iOSShopTests.debug.xcconfig */,
 				4D1DD2044EC36F0576340929 /* Pods-iOSShopTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
