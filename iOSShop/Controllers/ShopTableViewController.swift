@@ -80,48 +80,35 @@ class ShopTableViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let macShop = shop[indexPath.row]
-        
         let ac = UIAlertController(title: "Order a \(macShop.name)\n\(macShop.price)$",
                                    message: "Please Enter your name!",
                                    preferredStyle: .alert)
-        
         ac.addTextField()
-        
         ac.addAction(UIAlertAction(title: "Order it!", style: .default, handler: { action in
             guard let name = ac.textFields?[0].text else { return }
             self.order(macShop, name: name)
         }))
-        
         ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         present(ac, animated: true)
-        
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    
     private func order(_ shop: Shop, name: String) {
         let order = Order(itemName: shop.name, buyerName: name)
-        
-        let url = URL(string: "http//localhost:8080/store")!
-        
+        let url = URL(string: "http://localhost:8080/order")!
         let encoder = JSONEncoder()
-        
         var request = URLRequest(url: url)
         request.httpMethod = "POST"
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpBody = try? encoder.encode(order)
-        
-        URLSession.shared.dataTask(with: request) { data, response, error in
+        URLSession.shared.dataTask(with: request) { data, _, error in
             if let data = data {
                 let decoder = JSONDecoder()
-                
                 do {
                     let item = try decoder.decode(Order.self, from: data)
-                    print(item.buyerName)
-                }
+                    print(item.buyerName)}
                 catch {
-                    print(error.localizedDescription ?? "Error")
+                    print(error.localizedDescription)
                 }
-                
             }
         }.resume()
     }
