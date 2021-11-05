@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import ViewAnimator
 
 class ShopTableViewController: UITableViewController {
 
@@ -22,6 +23,17 @@ class ShopTableViewController: UITableViewController {
         tableView.estimatedRowHeight = 500.0
         tableView.rowHeight = UITableView.automaticDimension
         fetchData()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        animateCell()
+    }
+    
+    // MARK: -Animation
+    private func animateCell() {
+        let animations = AnimationType.random()
+        UIView.animate(views: tableView.visibleCells, animations: [animations])
     }
     
     // MARK: - Parse JSON

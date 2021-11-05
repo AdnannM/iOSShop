@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6BACE91F1CF701825C5A3599 /* Pods_iOSShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADD9CB87F5BA5AA52214A85F /* Pods_iOSShop.framework */; };
 		8D1AA70AECC7CFA877C9EF0B /* Pods_iOSShop_iOSShopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397235890DCC25D5E7A47457 /* Pods_iOSShop_iOSShopUITests.framework */; };
 		A691257A27327E8100B279EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A691257927327E8100B279EE /* AppDelegate.swift */; };
 		A691257C27327E8100B279EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A691257B27327E8100B279EE /* SceneDelegate.swift */; };
@@ -75,6 +76,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BACE91F1CF701825C5A3599 /* Pods_iOSShop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -221,6 +223,7 @@
 				A691257327327E8100B279EE /* Frameworks */,
 				A691257427327E8100B279EE /* Resources */,
 				A69125B32732C6D800B279EE /* ShellScript */,
+				CC61CB8554ABC236C48E92BF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -258,6 +261,7 @@
 				A691259227327E8300B279EE /* Sources */,
 				A691259327327E8300B279EE /* Frameworks */,
 				A691259427327E8300B279EE /* Resources */,
+				F4CD2C4EEB4E3A4A0DB84239 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -421,6 +425,40 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CC61CB8554ABC236C48E92BF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOSShop/Pods-iOSShop-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOSShop/Pods-iOSShop-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOSShop/Pods-iOSShop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F4CD2C4EEB4E3A4A0DB84239 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOSShop-iOSShopUITests/Pods-iOSShop-iOSShopUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-iOSShop-iOSShopUITests/Pods-iOSShop-iOSShopUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-iOSShop-iOSShopUITests/Pods-iOSShop-iOSShopUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
