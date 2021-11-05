@@ -48,7 +48,8 @@ class ShopTableViewController: UITableViewController {
     // MARK: - Table view data source
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 2
+        return 1
+        
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -62,17 +63,21 @@ class ShopTableViewController: UITableViewController {
         // Configure cell
         if indexPath.row == 0 {
             cell?.imageViewCell.image = UIImage(named: "macbook-10")
-            cell?.modelLabel!.text = shop.model
-            cell?.nameLabel!.text = shop.name
-            cell?.cpuLabel.text = shop.cpu
-            cell?.priceLabel!.text = String("\(shop.price)$")
+           
         } else if indexPath.row == 1 {
-            cell?.imageViewCell.image = UIImage(named: "macbook-1")
-            cell?.modelLabel!.text = shop.model
-            cell?.nameLabel!.text = shop.name
-            cell?.cpuLabel.text = shop.cpu
-            cell?.priceLabel!.text = String("\(shop.price)$")
+            cell?.imageViewCell.image = UIImage(named: "macbook-18")
+        } else if indexPath.row == 2 {
+            cell?.imageViewCell.image = UIImage(named: "macbook-16")
+           
+        }else if indexPath.row == 3 {
+            cell?.imageViewCell.image = UIImage(named: "macbook-3")
         }
+        
+        cell?.modelLabel!.text = shop.model
+        cell?.nameLabel!.text = shop.name
+        cell?.cpuLabel.text = shop.cpu
+        cell?.priceLabel!.text = String("\(shop.price)$")
+        
         return cell!
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -13,6 +13,8 @@ class ShopTableViewCell: UITableViewCell {
     @IBOutlet weak var backgroundCellView: UIView! {
         didSet {
             backgroundCellView.layer.cornerRadius = 20
+            backgroundCellView.layer.borderWidth = 2
+            backgroundCellView.layer.borderColor = UIColor.black.cgColor
         }
     }
     @IBOutlet weak var imageViewCell: UIImageView! {
