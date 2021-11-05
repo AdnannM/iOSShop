@@ -17,6 +17,8 @@ class ShopTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        title = "Welcome to Store"
+        
         tableView.estimatedRowHeight = 500.0
         tableView.rowHeight = UITableView.automaticDimension
         fetchData()
@@ -91,7 +93,6 @@ class ShopTableViewController: UITableViewController {
         ac.addTextField()
         ac.addAction(UIAlertAction(title: "Order it!", style: .default, handler: { action in
             guard let name = ac.textFields?[0].text else { return }
-            self.order(macShop, name: name)
         }))
         ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         present(ac, animated: true)

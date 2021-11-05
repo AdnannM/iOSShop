@@ -27,7 +27,7 @@
                                     <fontDescription key="titleFontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="26"/>
                                 </buttonConfiguration>
                                 <connections>
-                                    <segue destination="5TU-RZ-IBI" kind="presentation" id="nSO-2h-xCm"/>
+                                    <segue destination="lMk-yI-hMW" kind="presentation" modalPresentationStyle="fullScreen" id="nSO-2h-xCm"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -56,9 +56,10 @@
             <objects>
                 <tableViewController id="5TU-RZ-IBI" customClass="ShopTableViewController" customModule="iOSShop" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="669-VL-rgK">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="systemGray3Color"/>
+                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="495" id="sqO-9e-sWf" customClass="ShopTableViewCell" customModule="iOSShop" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="495"/>
@@ -153,8 +154,27 @@
                             <outlet property="delegate" destination="5TU-RZ-IBI" id="Z0P-gy-B9c"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" id="q0K-zv-OLq"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KbM-4l-8W1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1857.9710144927537" y="72.991071428571431"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="gf0-Bu-Tia">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lMk-yI-hMW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="VYE-Kd-Md3">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="5TU-RZ-IBI" kind="relationship" relationship="rootViewController" id="GUi-Wm-chJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WxW-kS-kou" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="947.82608695652186" y="72.991071428571431"/>
         </scene>
