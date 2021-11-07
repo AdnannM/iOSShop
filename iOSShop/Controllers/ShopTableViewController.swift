@@ -52,8 +52,9 @@ class ShopTableViewController: UITableViewController {
             }
         }.resume()
     }
-
-    // MARK: - Table view data source
+}
+// MARK: - Table view data source
+extension ShopTableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
