@@ -47,8 +47,7 @@ class ShopTableViewController: UITableViewController {
                     self.tableView.reloadData()
                     print("Loaded \(self.shop.count) shop Item")
                 }
-            }
-            catch {
+            } catch {
                 print("Unable to parse JSON Response")
             }
         }.resume()
@@ -74,7 +73,7 @@ class ShopTableViewController: UITableViewController {
             cell?.imageViewCell.image = UIImage(named: "macbook-18")
         } else if indexPath.row == 2 {
             cell?.imageViewCell.image = UIImage(named: "macbook-16")
-        }else if indexPath.row == 3 {
+        } else if indexPath.row == 3 {
             cell?.imageViewCell.image = UIImage(named: "macbook-3")
         }
         cell?.modelLabel!.text = shop.model
@@ -88,15 +87,15 @@ class ShopTableViewController: UITableViewController {
     }
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let macShop = shop[indexPath.row]
-        let ac = UIAlertController(title: "Order a \(macShop.name)\n\(macShop.price)$",
+        let alert = UIAlertController(title: "Order a \(macShop.name)\n\(macShop.price)$",
                                    message: "Please Enter your name!",
                                    preferredStyle: .alert)
-        ac.addTextField()
-        ac.addAction(UIAlertAction(title: "Order it!", style: .default, handler: { action in
-            guard let name = ac.textFields?[0].text else { return }
+        alert.addTextField()
+        alert.addAction(UIAlertAction(title: "Order it!", style: .default, handler: { _ in
+            guard (alert.textFields?[0].text) != nil else { return }
         }))
-        ac.addAction(UIAlertAction(title: "Cancel", style: .cancel))
-        present(ac, animated: true)
+        alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
+        present(alert, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
     }
     private func order(_ shop: Shop, name: String) {
@@ -112,8 +111,8 @@ class ShopTableViewController: UITableViewController {
                 let decoder = JSONDecoder()
                 do {
                     let item = try decoder.decode(Order.self, from: data)
-                    print(item.buyerName)}
-                catch {
+                    print(item.buyerName)
+                } catch {
                     print(error.localizedDescription)
                 }
             }

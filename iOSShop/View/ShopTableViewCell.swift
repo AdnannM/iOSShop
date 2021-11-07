@@ -22,7 +22,6 @@ class ShopTableViewCell: UITableViewCell {
             imageViewCell.layer.cornerRadius = 20
         }
     }
-    
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var modelLabel: UILabel!
     @IBOutlet weak var priceLabel: UILabel!
@@ -34,8 +33,5 @@ class ShopTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
-
 }
