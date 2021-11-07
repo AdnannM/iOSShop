@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6BACE91F1CF701825C5A3599 /* Pods_iOSShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ADD9CB87F5BA5AA52214A85F /* Pods_iOSShop.framework */; };
 		8D1AA70AECC7CFA877C9EF0B /* Pods_iOSShop_iOSShopUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 397235890DCC25D5E7A47457 /* Pods_iOSShop_iOSShopUITests.framework */; };
+		A61CD41427384CD500F84AAF /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61CD41327384CD500F84AAF /* DetailViewController.swift */; };
 		A691257A27327E8100B279EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A691257927327E8100B279EE /* AppDelegate.swift */; };
 		A691257C27327E8100B279EE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A691257B27327E8100B279EE /* SceneDelegate.swift */; };
 		A691257E27327E8100B279EE /* WellcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A691257D27327E8100B279EE /* WellcomeViewController.swift */; };
@@ -50,6 +51,7 @@
 		64EDEFA180883E1F302A343B /* Pods_iOSShopTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_iOSShopTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6DDAEC62CEC459E9734F26D5 /* Pods-iOSShop-iOSShopUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSShop-iOSShopUITests.debug.xcconfig"; path = "Target Support Files/Pods-iOSShop-iOSShopUITests/Pods-iOSShop-iOSShopUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		8AFC3975B498F753ACC30407 /* Pods-iOSShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-iOSShop.debug.xcconfig"; path = "Target Support Files/Pods-iOSShop/Pods-iOSShop.debug.xcconfig"; sourceTree = "<group>"; };
+		A61CD41327384CD500F84AAF /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		A691257627327E8100B279EE /* iOSShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A691257927327E8100B279EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A691257B27327E8100B279EE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 			children = (
 				A691257D27327E8100B279EE /* WellcomeViewController.swift */,
 				A69125AD2732811B00B279EE /* ShopTableViewController.swift */,
+				A61CD41327384CD500F84AAF /* DetailViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -475,6 +478,7 @@
 				A69125B02732812800B279EE /* Shop.swift in Sources */,
 				A691257C27327E8100B279EE /* SceneDelegate.swift in Sources */,
 				A6E7C7CA2733DFEA00A97FD2 /* Order.swift in Sources */,
+				A61CD41427384CD500F84AAF /* DetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
