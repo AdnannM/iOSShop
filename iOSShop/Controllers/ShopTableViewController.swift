@@ -13,29 +13,24 @@ class ShopTableViewController: UITableViewController {
     // MARK: - Properties
     var shop = [Shop]()
     let cellHight: CGFloat = 500
-    
-    //View LifeCycle
+    // View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
         title = "Welcome to Store"
-        
         tableView.estimatedRowHeight = 500.0
         tableView.rowHeight = UITableView.automaticDimension
         fetchData()
     }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         animateCell()
     }
-    
-    // MARK: -Animation
+    // MARK: - Animation
     private func animateCell() {
         let animations = AnimationType.random()
         UIView.animate(views: tableView.visibleCells, animations: [animations])
     }
-    
     // MARK: - Parse JSON
     private func fetchData() {
         let url = URL(string: "http://localhost:8080/store")!
@@ -63,7 +58,6 @@ class ShopTableViewController: UITableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
-        
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -73,25 +67,20 @@ class ShopTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let shop = shop[indexPath.row]
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? ShopTableViewCell
-        
         // Configure cell
         if indexPath.row == 0 {
             cell?.imageViewCell.image = UIImage(named: "macbook-10")
-           
         } else if indexPath.row == 1 {
             cell?.imageViewCell.image = UIImage(named: "macbook-18")
         } else if indexPath.row == 2 {
             cell?.imageViewCell.image = UIImage(named: "macbook-16")
-           
         }else if indexPath.row == 3 {
             cell?.imageViewCell.image = UIImage(named: "macbook-3")
         }
-        
         cell?.modelLabel!.text = shop.model
         cell?.nameLabel!.text = shop.name
         cell?.cpuLabel.text = shop.cpu
         cell?.priceLabel!.text = String("\(shop.price)$")
-        
         return cell!
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

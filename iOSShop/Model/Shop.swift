@@ -8,7 +8,6 @@
 import Foundation
 
 struct Shop: Codable {
-    
     var name: String
     var model: String
     var cpu: String

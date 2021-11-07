@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 struct Order: Codable {
     var itemName: String
     var buyerName: String

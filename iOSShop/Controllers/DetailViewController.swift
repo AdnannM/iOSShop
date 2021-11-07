@@ -9,7 +9,6 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    
     // View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
