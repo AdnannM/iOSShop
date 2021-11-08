@@ -93,7 +93,10 @@ extension ShopTableViewController {
                                    preferredStyle: .alert)
         alert.addTextField()
         alert.addAction(UIAlertAction(title: "Order it!", style: .default, handler: { _ in
-            guard (alert.textFields?[0].text) != nil else { return }
+            guard let name = alert.textFields?[0].text else { return }
+            let messageOrder = UIAlertController(title: "Order Successful!", message: "You successfully order new!\(macShop.name)!", preferredStyle: .alert)
+            messageOrder.addAction(UIAlertAction(title: "OK", style: .cancel))
+            self.present(messageOrder, animated: true)
         }))
         alert.addAction(UIAlertAction(title: "Cancel", style: .cancel))
         present(alert, animated: true)
