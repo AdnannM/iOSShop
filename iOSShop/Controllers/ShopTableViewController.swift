@@ -12,7 +12,7 @@ class ShopTableViewController: UITableViewController {
 
     // MARK: - Properties
     var shop = [Shop]()
-    let cellHight: CGFloat = 500
+    let cellHight: CGFloat = 400
     // View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -94,7 +94,7 @@ extension ShopTableViewController {
         alert.addTextField()
         alert.addAction(UIAlertAction(title: "Order it!", style: .default, handler: { _ in
             guard let name = alert.textFields?[0].text else { return }
-            let messageOrder = UIAlertController(title: "Order Successful!", message: "You successfully order new!\(macShop.name)!", preferredStyle: .alert)
+            let messageOrder = UIAlertController(title: "Order Successful!", message: "You successfully order new\n\(macShop.name)!", preferredStyle: .alert)
             messageOrder.addAction(UIAlertAction(title: "OK", style: .cancel))
             self.present(messageOrder, animated: true)
         }))
