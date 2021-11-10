@@ -12,7 +12,7 @@ class ShopTableViewController: UITableViewController {
 
     // MARK: - Properties
     var shop = [Shop]()
-    let cellHight: CGFloat = 400
+    let cellHight: CGFloat = 500
     // View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,6 +21,7 @@ class ShopTableViewController: UITableViewController {
         tableView.estimatedRowHeight = 500.0
         tableView.rowHeight = UITableView.automaticDimension
         fetchData()
+        animateCell()
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -29,7 +30,7 @@ class ShopTableViewController: UITableViewController {
     // MARK: - Animation
     private func animateCell() {
         let animations = AnimationType.random()
-        UIView.animate(views: tableView.visibleCells, animations: [animations])
+        UIView.animate(views: tableView.subviews.self, animations: [animations])
     }
     // MARK: - Parse JSON
     private func fetchData() {
