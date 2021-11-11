@@ -9,18 +9,20 @@ import UIKit
 import ViewAnimator
 
 class ShopTableViewController: UITableViewController {
-
     // MARK: - Properties
     var shop = [Shop]()
     let cellHight: CGFloat = 500
     // View LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
         title = "Welcome to Store"
         tableView.estimatedRowHeight = 500.0
         tableView.rowHeight = UITableView.automaticDimension
-        fetchData()
+        Task {
+                try await ShopListViewModel.shared.fetchShopItem()
+                self.tableView.reloadData()
+        }
+        // fetchShopItem()
         animateCell()
     }
     override func viewWillAppear(_ animated: Bool) {
@@ -33,26 +35,26 @@ class ShopTableViewController: UITableViewController {
         UIView.animate(views: tableView.subviews.self, animations: [animations])
     }
     // MARK: - Parse JSON
-    private func fetchData() {
-        let url = URL(string: "http://localhost:8080/store")!
-        URLSession.shared.dataTask(with: url) { data, _, error in
-            guard let data = data else {
-                print(error?.localizedDescription ?? "Unknow Error")
-                return
-            }
-            let decoder = JSONDecoder()
-            do {
-                let shopItem = try decoder.decode([Shop].self, from: data)
-                DispatchQueue.main.async {
-                    self.shop = shopItem
-                    self.tableView.reloadData()
-                    print("Loaded \(self.shop.count) shop Item")
-                }
-            } catch {
-                print("Unable to parse JSON Response")
-            }
-        }.resume()
-    }
+//    func fetchShopItem() {
+//        let url = URL(string: "http://localhost:8080/store")!
+//        URLSession.shared.dataTask(with: url) { data, _, error in
+//            guard let data = data else {
+//                print(error?.localizedDescription ?? "Unknow Error")
+//                return
+//            }
+//            let decoder = JSONDecoder()
+//            do {
+//                let shopItem = try decoder.decode([Shop].self, from: data)
+//                DispatchQueue.main.async {
+//                    self.shop = shopItem
+//                    self.tableView.reloadData()
+//                    print("Loaded \(self.shop.count) shop Item")
+//                }
+//            } catch {
+//                print("Unable to parse JSON Response")
+//            }
+//        }.resume()
+//    }
 }
 // MARK: - Table view data source
 extension ShopTableViewController {
@@ -60,7 +62,6 @@ extension ShopTableViewController {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return shop.count
@@ -90,8 +91,8 @@ extension ShopTableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let macShop = shop[indexPath.row]
         let alert = UIAlertController(title: "Order a \(macShop.name)\n\(macShop.price)$",
-                                   message: "Please Enter your name!",
-                                   preferredStyle: .alert)
+                                      message: "Please Enter your name!",
+                                      preferredStyle: .alert)
         alert.addTextField()
         alert.addAction(UIAlertAction(title: "Order it!", style: .default, handler: { _ in
             guard let name = alert.textFields?[0].text else { return }
@@ -103,24 +104,24 @@ extension ShopTableViewController {
         present(alert, animated: true)
         tableView.deselectRow(at: indexPath, animated: true)
     }
-    private func order(_ shop: Shop, name: String) {
-        let order = Order(itemName: shop.name, buyerName: name)
-        let url = URL(string: "http://localhost:8080/order")!
-        let encoder = JSONEncoder()
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpBody = try? encoder.encode(order)
-        URLSession.shared.dataTask(with: request) { data, _, error in
-            if let data = data {
-                let decoder = JSONDecoder()
-                do {
-                    let item = try decoder.decode(Order.self, from: data)
-                    print(item.buyerName)
-                } catch {
-                    print(error.localizedDescription)
-                }
-            }
-        }.resume()
-    }
+    //    private func order(_ shop: Shop, name: String) {
+    //        let order = Order(itemName: shop.name, buyerName: name)
+    //        let url = URL(string: "http://localhost:8080/order")!
+    //        let encoder = JSONEncoder()
+    //        var request = URLRequest(url: url)
+    //        request.httpMethod = "POST"
+    //        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+    //        request.httpBody = try? encoder.encode(order)
+    //        URLSession.shared.dataTask(with: request) { data, _, error in
+    //            if let data = data {
+    //                let decoder = JSONDecoder()
+    //                do {
+    //                    let item = try decoder.decode(Order.self, from: data)
+    //                    print(item.buyerName)
+    //                } catch {
+    //                    print(error.localizedDescription)
+    //                }
+    //            }
+    //        }.resume()
+    //    }
 }
